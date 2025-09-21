@@ -172,7 +172,7 @@ def delete_block_after(skills_para: Paragraph):
 
 def update_resume_skills(input_path: str, output_path: str, skills: Dict[str, List[str]]) -> None:
     if not os.path.exists(input_path):
-        raise FileNotFoundError(f"❌ File not found: {input_path}")
+        raise FileNotFoundError(f"File not found: {input_path}")
 
     doc = Document(input_path)
 
@@ -182,7 +182,7 @@ def update_resume_skills(input_path: str, output_path: str, skills: Dict[str, Li
             skills_para = p
             break
     if not skills_para:
-        raise ValueError("❌ Could not find SKILLS heading (must be exactly 'SKILLS')")
+        raise ValueError("Could not find SKILLS heading (must be exactly 'SKILLS')")
 
     content_style = get_content_style_after(skills_para)
     if content_style is None:
@@ -214,15 +214,15 @@ def update_resume_skills(input_path: str, output_path: str, skills: Dict[str, Li
 
     # Save DOCX
     doc.save(output_path)
-    print(f"✅ Resume updated, saved as: {output_path}")
+    print(f"Resume updated, saved as: {output_path}")
 
     # Export to PDF
     pdf_path = output_path.replace(".docx", ".pdf")
     try:
         convert(output_path, pdf_path)
-        print(f"✅ PDF exported: {pdf_path}")
+        print(f"PDF exported: {pdf_path}")
     except Exception as e:
-        print(f"⚠️ PDF export failed: {e}")
+        print(f"PDF export failed: {e}")
 
 
 # ---------- Example run ----------

@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
-    raise ValueError("❌ Please set OPENAI_API_KEY in your .env file")
+    raise ValueError("Please set OPENAI_API_KEY in your .env file")
 
 client = OpenAI(api_key=api_key)
 
@@ -44,11 +44,11 @@ if __name__ == "__main__":
         sys.exit(1)
 
     url = sys.argv[1]
-    print(f"🔎 Fetching JD: {url}")
+    print(f"Fetching JD: {url}")
     jd_text = extract_jd_text(url)
-    print("✅ JD text fetched (saved to jd_text.txt if needed)")
+    print("JD text fetched (saved to jd_text.txt if needed)")
 
-    print("🤖 Analyzing skills...")
+    print("Analyzing skills...")
     skills = analyze_jd(jd_text)
 
     print("\n=== Extracted Skills ===")

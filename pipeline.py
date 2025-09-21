@@ -20,7 +20,7 @@ from update_resume import update_resume_skills
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
-    raise ValueError("❌ Please set OPENAI_API_KEY in .env")
+    raise ValueError("Please set OPENAI_API_KEY in .env")
 
 client = OpenAI(api_key=api_key)
 
@@ -72,7 +72,7 @@ def analyze_jd(text: str) -> dict:
         return json.loads(raw)
 
     except Exception as e:
-        print("⚠️ JSON parse failed:", e)
+        print("JSON parse failed:", e)
         return {"programming": [], "development": [], "ai": []}
 
 
@@ -109,10 +109,10 @@ if __name__ == "__main__":
 
     url = sys.argv[1]
 
-    print(f"🔎 Fetching JD: {url}")
+    print(f"Fetching JD: {url}")
     jd_text = extract_jd_text(url)
 
-    print("🤖 Analyzing skills...")
+    print("Analyzing skills...")
     extracted = analyze_jd(jd_text)
 
     # Default resume skills (used for merging)

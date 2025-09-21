@@ -81,13 +81,13 @@ def extract_jd_text(url: str) -> str:
         res = requests.get(url, timeout=15, headers=headers)
         text = _extract_from_html(res.text, url)
         if text and len(text) > 200:
-            print("✅ Extracted via requests")
+            print("Extracted via requests")
             return text
     except Exception as e:
-        print(f"⚠️ requests failed: {e}")
+        print(f"requests failed: {e}")
 
     # Fallback: Playwright
-    print("⚠️ Falling back to Playwright rendering...")
+    print("Falling back to Playwright rendering...")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
@@ -98,9 +98,9 @@ def extract_jd_text(url: str) -> str:
 
     text = _extract_from_html(html, url)
     if not text:
-        raise RuntimeError("❌ Failed to extract job description after Playwright rendering: " + url)
+        raise RuntimeError("Failed to extract job description after Playwright rendering: " + url)
 
-    print("✅ Extracted via Playwright")
+    print("Extracted via Playwright")
     return text
 
 
