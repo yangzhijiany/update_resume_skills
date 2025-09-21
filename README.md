@@ -2,7 +2,7 @@
 
 An AI-powered automation tool that extracts skill requirements from job descriptions and automatically updates your resume's skills section.
 
-## 🚀 Features
+## Features
 
 - **Intelligent Skill Extraction**: Uses OpenAI GPT-4o-mini to automatically identify and classify skills from job descriptions
 - **Multi-Platform Support**: Supports major ATS platforms (iCIMS, Workday, Greenhouse, Ashby, Lever, etc.)
@@ -14,13 +14,13 @@ An AI-powered automation tool that extracts skill requirements from job descript
 - **PDF Export**: Automatically generates PDF versions of updated resumes
 - **Smart Merging**: Intelligently merges new skills with existing ones, avoiding duplicates
 
-## 📋 System Requirements
+## System Requirements
 
 - Python 3.8+
 - Microsoft Word (for PDF conversion)
 - Stable internet connection
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the repository**
 ```bash
@@ -55,7 +55,7 @@ SPACE_AFTER_PT=6
 LINE_SPACING_RULE=SINGLE
 ```
 
-## 🎯 Usage
+## Usage
 
 ### Method 1: Complete Pipeline (Recommended)
 ```bash
@@ -72,7 +72,7 @@ python main.py "https://example.com/job-posting"
 python update_resume.py
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 fetch_skills/
@@ -88,7 +88,7 @@ fetch_skills/
 └── *.docx             # Resume files
 ```
 
-## 🔧 Supported ATS Platforms
+## Supported ATS Platforms
 
 - **iCIMS** - Popular with large enterprises
 - **Workday** - Enterprise HR systems
@@ -99,7 +99,7 @@ fetch_skills/
 - **BambooHR** - SME HR systems
 - **Generic Support** - Fallback mechanism for other platforms
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -120,7 +120,7 @@ fetch_skills/
 - Supports skills sections in both tables and paragraphs
 - Tool automatically maintains original formatting style
 
-## 🎨 Skill Classification Rules
+## Skill Classification Rules
 
 ### Programming & Frameworks
 - Programming Languages: Java, Python, C++, JavaScript, etc.
@@ -137,14 +137,14 @@ fetch_skills/
 - Machine Learning: TensorFlow, PyTorch, etc.
 - Visualization: Tableau, Power BI, etc.
 
-## 🚨 Important Notes
+## Important Notes
 
 1. **API Costs**: Using OpenAI API incurs costs, monitor your usage
 2. **Network Dependency**: Requires stable internet connection to access job pages
 3. **File Backup**: Recommend backing up original resume files before running
 4. **Format Compatibility**: Ensure resume uses standard Word format, avoid complex layouts
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -163,7 +163,7 @@ fetch_skills/
 - Check if file is being used by another program
 - Verify resume format meets requirements
 
-## 📈 Future Plans
+## Future Plans
 
 - [ ] Support for more ATS platforms
 - [ ] Add skill matching score
@@ -171,19 +171,19 @@ fetch_skills/
 - [ ] Add web interface
 - [ ] Support more resume formats
 
-## 🤝 Contributing
+## Contributing
 
 Issues and Pull Requests are welcome to improve this project!
 
-## 📄 License
+## License
 
 MIT License
 
-## 📞 Contact
+## Contact
 
 For questions or suggestions, please contact via:
 - Submit GitHub Issue
-- Send email to [your-email@example.com]
+- Send email to [yangzhijiany2021@gmail.com]
 
 ---
 
